@@ -4,16 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+<!-- PSUEDO CODE -->
+<!-- 
+- Create HTML layout using Bootstrap, and worry about CSS Styling later.
+- On game load, computer will load a random number for user to guess, which will auto generate between 19 - 120. 
+	- Wins and losses will both be reset/set to 0.
+- 4 images need to be created as buttons.
+- When each image is clicked, it will generate a random number, which will be hidden from the user. 
+	- Each randomly generated number from the crystal click will be between numbers 1 - 12. 
+	- Once the button is clicked, and random number generated, the number should be pushed to a string.
+	- Create a variable for the added string of numbers.
+	- The total of numbers added up are then compared to auto generated computer number.
+- If the added up numbers equal up to the computer number, then user wins, and win counter will increase by 1. If added numbers added up more than computer number, user will lose, and loser counter will increase by 1. 
+-->
 
 <body>
-    <script type="text/javascript">
-    
-    
-    </script>
+    <!-- Bootstrap components to create HTML -->
+    <div class="jumbotron text-center">
+        <h1>Crystal Collectors!</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Game Collector Instructions</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        1. You will be given a random number at the start of the game.
+                    </p>
+                    <p>
+                        2. There are four crystals below, by clicking on a crystal you will add a specific amount of points to your total score.
+                    </p>
+                    <p>
+                        3. You win the game by matching your total score to a random nmber, you lose the game if your total score goes above the random number.
+                    </p>
+                    <p>
+                        The value of each crystal is hiden from you until you click on it.
+                    </p>
+                    <p>
+                        Each time when the game starts, the game will change the value of each crystal.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Number To Guess</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="computerGuess"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Your Total Score</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="userGuess"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Score Counter</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Wins:
+                    </p>
+                    <p>
+                        Losses:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-6">
+    	<input type="image" class="img imgButtons" src="assets/images/aquamarine.png"/>
+    	<input type="image" class="img imgButtons" src="assets/images/amethyst.png"/>
+    	<input type="image" class="img imgButtons" src="assets/images/diamond.png"/>
+    	<input type="image" class="img imgButtons" src="assets/images/emerald.png"/>
+    </div>
+    </div>
+    <!-- Run Javascript after all of HTML is loaded -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
