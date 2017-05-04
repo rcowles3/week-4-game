@@ -42,7 +42,7 @@
                         2. There are four crystals below, by clicking on a crystal you will add a specific amount of points to your total score.
                     </p>
                     <p>
-                        3. You win the game by matching your total score to a random nmber, you lose the game if your total score goes above the random number.
+                        3. You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.
                     </p>
                     <p>
                         The value of each crystal is hiden from you until you click on it.
@@ -69,7 +69,7 @@
                     <h3 class="panel-title">Your Total Score</h3>
                 </div>
                 <div class="panel-body text-center">
-                    <div id="userGuess"></div>
+                    <div id="userGuess">0</div>
                 </div>
             </div>
         </div>
@@ -80,21 +80,21 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        Wins:
+                        Wins: <div id="wins">0</div>
                     </p>
                     <p>
-                        Losses:
+                        Losses: <div id="loss">0</div>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-6"></div>
     <div class="col-md-6">
-    	<input type="image" class="img imgButtons" src="assets/images/aquamarine.png"/>
-    	<input type="image" class="img imgButtons" src="assets/images/amethyst.png"/>
-    	<input type="image" class="img imgButtons" src="assets/images/diamond.png"/>
-    	<input type="image" class="img imgButtons" src="assets/images/emerald.png"/>
+    	<input id="aquamarine" type="image" class="img imgButtons" src="assets/images/aquamarine.png"/>
+    	<input id="amethyst" type="image" class="img imgButtons" src="assets/images/amethyst.png"/>
+    	<input id="diamond" type="image" class="img imgButtons" src="assets/images/diamond.png"/>
+    	<input id="emerald" type="image" class="img imgButtons" src="assets/images/emerald.png"/>
     </div>
     </div>
     <!-- Run Javascript after all of HTML is loaded -->
