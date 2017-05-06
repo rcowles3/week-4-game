@@ -22,3 +22,11 @@ body {
 #emerald {
 	margin-left: 5px;
 }
+
+.panel-default>.panel-heading {
+	border-color: black;
+}
+
+.img {
+	margin-bottom: 10px;
+}

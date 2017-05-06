@@ -1,8 +1,8 @@
 // On game load, computer will load a random number for user to guess, which will auto generate between 19 - 120, in which user will have to click crystal buttons to guess up to computer generated number. 
 $(document).ready(function() {
 
-// VARIABLES 
-// ===============================================
+    // VARIABLES 
+    // ===============================================
 
     // Each randomly generated number from the crystal click will be between numbers 1 - 12. 
     var aquamarineAmnt = Math.floor((Math.random() * 12) + 1);
@@ -10,8 +10,8 @@ $(document).ready(function() {
     var diamondAmnt = Math.floor((Math.random() * 12) + 1);
     var amethystAmnt = Math.floor((Math.random() * 12) + 1);
 
-   	// Computer generates random number for user to guess to
-    computerNumber = Math.floor((Math.random() * 21) + 19);
+    // Computer generates random number for user to guess to
+    computerNumber = Math.floor((Math.random() * 121) + 19);
 
     console.log(computerNumber);
 
@@ -22,8 +22,8 @@ $(document).ready(function() {
     // Create a variable for the added string of numbers.
     var clickNo = 0;
 
-// JQUERY FUNCTIONS 
-// ===============================================
+    // JQUERY FUNCTIONS 
+    // ===============================================
 
     // Need to send number back into random number div
     $("#computerGuess").html(computerNumber);
@@ -60,18 +60,38 @@ $(document).ready(function() {
             wins = wins++;
             $('#wins').html(wins);
             alert("You Win!")
-            
+            reset();
 
         } else if (clickNo >= computerNumber) {
             console.log(losses++);
             losses = losses++;
             $('#loss').html(losses);
             alert("You Lose, Try Again!")
-            // $("#userGuess").html(0);
-            clickNoReset();
+            reset();
         }
     });
 
-    // // Function to reset user counter after win/loss
-    
+    // Function to reset user counter, and random numbers, and adding win/loss count. 
+    function reset() {
+
+    	// Reset user counter.
+        clickNo = 0;
+
+        // Reset will also randomize computer number and crystal variables as well. 
+        computerNumber = Math.floor((Math.random() * 121) + 19);
+
+        aquamarineAmnt = Math.floor((Math.random() * 12) + 1);
+
+        emeraldAmnt = Math.floor((Math.random() * 12) + 1);
+
+        diamondAmnt = Math.floor((Math.random() * 12) + 1);
+        
+        amethystAmnt = Math.floor((Math.random() * 12) + 1);
+
+
+        // Need to send number back into random number div
+        $("#computerGuess").html(computerNumber);
+
+        // console.log("test");
+    }
 });
