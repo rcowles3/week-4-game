@@ -61,13 +61,15 @@ $(document).ready(function() {
             $('#wins').html(wins);
             alert("You Win!")
             reset();
-
-        } else if (clickNo >= computerNumber) {
+            $("#userGuess").html(clickNo);
+        }
+         else if (clickNo >= computerNumber) {
             console.log(losses++);
             losses = losses++;
             $('#loss').html(losses);
             alert("You Lose, Try Again!")
             reset();
+            $("#userGuess").html(clickNo);
         }
     });
 
