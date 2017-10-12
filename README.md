@@ -1,8 +1,8 @@
-## Crystal Collector
+# Crystal Collector
 
 Interactive web browser game that dynamically updates HTML pages through the use of the jQuery library.
 
-# Overview:
+## Overview:
 
    * There will be four crystals displayed as buttons on the page.
 
